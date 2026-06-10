@@ -1,11 +1,13 @@
+# banking.pkmprojects.online
+
 server:
-  port: 8085
+  port: 8091
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/bank_db?createDatabaseIfNotExist=true
-    username: root
-    password: spring@
+    url: jdbc:mysql://localhost:3306/banking_schema
+    username: banking
+    password: banking@pkmprojects
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     generate-ddl: true
@@ -18,7 +20,3 @@ spring:
 
 jwt:
   secret: banksecurityapplicationjwtsecretkeybanksecurityapplication
-
-logging:
-  level:
-    org.springframework.security: DEBUG

@@ -15,7 +15,7 @@
 
     <groupId>com.security</groupId>
     <artifactId>bank</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>Secure Banking</name>
     <description>Secure Banking</description>
 
@@ -90,6 +90,12 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <optional>true</optional>
+        </dependency>
+
+        <!-- ===================== ThymeLeaf ===================== -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
         <!-- ===================== Testing ===================== -->

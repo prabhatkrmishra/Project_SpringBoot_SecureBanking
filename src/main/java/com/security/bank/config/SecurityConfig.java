@@ -69,7 +69,7 @@ public class SecurityConfig {
      */
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable().authenticationProvider(authenticationProvider()).authorizeRequests().antMatchers("/user/register", "/user/login").permitAll().antMatchers("/admin/**").hasAuthority("ROLE_ADMIN").anyRequest().authenticated();
+        http.csrf().disable().authenticationProvider(authenticationProvider()).authorizeRequests().antMatchers("/", "/user/register", "/user/login").permitAll().antMatchers("/admin/**").hasAuthority("ROLE_ADMIN").anyRequest().authenticated();
 
         http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
